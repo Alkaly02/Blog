@@ -1,0 +1,252 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+/*---- header ----*/
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10rem 1rem 8rem;
+	background-color: #F5F5F5;
+}
+.logo h1, .logo p{
+	margin: 0;
+	padding: 0;
+}
+.logo h1{
+	margin-top: 2rem;
+	color: #8D6E63;
+	font-size: 1.5em;
+}
+.logo p{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.6em;
+	color: #2980B9;
+	font-weight: bold;
+}
+nav{
+	margin-top: 1rem;
+}
+nav ul{
+	display: flex;
+}
+ul li{
+	list-style-type: none;
+}
+li > a{
+	display: block;
+	padding: 1em;
+	color: #8D6E63;
+	font-weight: bold;
+	text-decoration: none;
+}
+li a:hover{
+	background-color: rgba(188, 170, 164, 0.3);
+	border-radius: 5px;
+}
+
+/*++++ main ++++*/
+main{
+	display: grid;
+	grid-template-columns: 2fr 30px 1fr;
+	grid-template-areas: "article . aside";
+	width: 80%;
+	margin: 2rem auto;
+}
+article{
+	grid-area: article;
+}
+aside{
+	grid-area: aside;
+}
+/*### article ###*/
+.background{
+	background: url('img/salon.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+}
+#background p{
+	font-weight: bold;
+	color: #8D6E63;
+}
+#me img, .crepe img, .work img, .decoration img{
+	width: 70%;
+}
+.section-1 h2, .section-1 p, .image p, .text h2, .text p{
+	color: #2E4053;
+	font-family: verdana;
+	font-size: 0.95em;
+}
+strong{
+	color: #3498DB;
+}
+
+.section-2{
+	border-top: 3px solid #717D7E;
+	padding-top: 1.5rem;
+}
+.container{
+	display: flex;
+	margin-bottom: 1.5rem;
+}
+.image{
+	width: 60%;
+}
+.image img{
+	max-width: 100%;
+}
+.image p{
+	font-size: 0.9em;
+	margin-top: 0;
+	font-size: 0.8em;
+}
+.text{
+	padding-left: 1rem;
+
+}
+.text h2{
+	margin: 0;
+}
+.text a{
+	text-decoration: none;
+	color: #3498DB;
+	text-decoration: underline;
+}
+
+/*### aside ###*/
+#about, #posts{
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	border: 10px solid #717D7E;
+}
+#posts{
+	margin-top: 2rem;
+}
+#about h2, #posts h2, #about p, #posts p{
+	color: #2E4053;
+	font-family: verdana;
+	font-size: 0.95em;
+}
+#me p{
+	padding: 5px;
+}
+.work, .decoration{
+	padding-top: 15px;
+}
+
+.trait{
+	width: 70%;
+	margin: auto;
+	height: 2px;
+	background-color: #2E4053;
+}
+.separation{
+	display: none;
+	width: 30%;
+	margin: auto;
+	height: 4px;
+	background-color: #2E4053;
+}
+
+@media(max-width: 1200px){
+	.image{
+		width: 95%;
+		font-size: 0.85em;
+	}
+	#about, #posts{
+		width: 50%;
+	}
+}
+@media(max-width: 990px){
+	header{
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 0;
+		width: 100%;
+	}
+	.logo p{
+		margin-top: 5px;
+	}
+	nav{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		font-size: 0.85em;
+	}
+	nav ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	main{
+		grid-template-columns: 1fr;
+		grid-template-areas: "article"
+							 "aside";
+	}
+	.image{
+		width: 95%;
+		font-size: 0.85em;
+	}
+	aside{
+		display: flex;
+	}
+	#about{
+		margin-top: 32px;
+	}
+	#about, #posts{
+		width: 45%;
+	}
+}
+
+@media(max-width: 750px){
+	.container{
+		flex-direction: column;
+	}
+	.image{
+		text-align: center;
+		font-size: 0.95em;
+	}
+	.text{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.image img{
+		max-width: 50%;
+	}
+	.separation{
+		display: block;
+		margin-bottom: 30px;
+	}
+
+}
+
+@media(max-width: 560px){
+	main{
+		width: 90%;
+	}
+	.image{
+		width: 95%;
+		font-size: 0.85em;
+	}
+	aside{
+		flex-direction: column;
+	}
+	#about{
+		margin-top: 32px;
+	}
+	#about, #posts{
+		width: 70%;
+	}
+}
+
+@media(max-width: 400px){
+	#about, #posts{
+		width: 90%;
+	}
+}
