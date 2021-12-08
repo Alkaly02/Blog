@@ -231,8 +231,11 @@ strong{
 		width: 90%;
 	}
 	.image{
-		width: 95%;
+		width: 100%;
 		font-size: 0.85em;
+	}
+	.image img{
+		width: 100%;
 	}
 	aside{
 		flex-direction: column;
